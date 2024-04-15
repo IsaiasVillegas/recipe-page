@@ -26,15 +26,15 @@ const Recipe = ({
           </div>
 
           <div className="p-6 bg-n-2 rounded-xl space-y-4 md:p-7">
-            <h3 className="font-outfit font-semibold text-xl text-p-2">
+            <p className="font-outfit font-semibold text-xl text-p-2">
               Preparation time
-            </h3>
+            </p>
 
             <ul className="list-disc marker:text-p-2 ml-6 space-y-2">
               {PreparationTime.map((item) => (
                 <li className="pl-4" key={item.title}>
                   <p className="font-outfit font-normal text-base text-n-5">
-                    <strong>{item.title}:</strong> {item.text}
+                    <span className="font-bold">{item.title}:</span> {item.text}
                   </p>
                 </li>
               ))}
@@ -49,7 +49,7 @@ const Recipe = ({
             <ul className="list-disc marker:text-p-1 marker:text-xs ml-6 space-y-2">
               {ingredients.map((item) => (
                 <li className="pl-4" key={item}>
-                  <p className="font-outfit font-semibold text-base text-n-5">
+                  <p className="font-outfit font-normal text-base text-n-5">
                     {item}
                   </p>
                 </li>
@@ -66,7 +66,7 @@ const Recipe = ({
           <ol className="list-decimal marker:text-p-1 marker:font-outfit marker:font-bold text-base  ml-6 space-y-2">
             {instructions.map((item) => (
               <li className="pl-4" key={item.title}>
-                <p className="font-outfit font-semibold  text-n-5">
+                <p className="font-outfit font-normal  text-n-5">
                   <strong>{item.title}</strong>: {item.text}
                 </p>
               </li>
